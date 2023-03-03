@@ -1,7 +1,10 @@
 package Core;
 
+import Decorator.GUIFactory;
+import Decorator.LinuxFactory;
 import Widgets.Character;
 import Widgets.Rectangle;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -11,7 +14,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GlyphObjectTest {
     GlyphObject object = new GlyphObject();
-
+    GUIFactory factory;
+    GlyphObjectTest(){
+        factory = new LinuxFactory();
+    }
     @Test
     void getProperty() {
         this.object.setProperty(GlyphPropeties.X, 20);
@@ -26,13 +32,13 @@ class GlyphObjectTest {
             this.object.child(0);
         });
         assertEquals(IndexOutOfBoundsException.class.getTypeName(), exception.getClass().getTypeName());
-        this.object.insert(new Rectangle());
+        this.object.insert(factory.createRectangle());
         assertNotNull(this.object.child(0));
     }
 
     @Test
     void remove() {
-        this.object.insert(new Rectangle());
+        this.object.insert(factory.createBorder());
         assertNotNull(this.object.child(0));
         this.object.remove(0);
         Exception exception = assertThrows(IndexOutOfBoundsException.class, () -> {
@@ -43,16 +49,16 @@ class GlyphObjectTest {
 
     @Test
     void parent() {
-        this.object.insert(new Rectangle());
+        this.object.insert(factory.createRectangle());
         assertEquals(this.object, this.object.child(0).parent());
     }
 
     @Test
     void reverseChildren() {
-        this.object.insert(new Rectangle());
-        this.object.insert(new Character('E'));
-        this.object.insert(new Character('A'));
+        this.object.insert(factory.createRectangle());
+        this.object.insert(factory.createCharacter('E'));
+        this.object.insert(factory.createCharacter('A'));
         this.object.reverseChildren();
-        assertEquals(new Character('A').getClass().getTypeName(), this.object.child(0).getClass().getTypeName());
+        assertEquals(factory.createCharacter('A').getClass().getTypeName(), this.object.child(0).getClass().getTypeName());
     }
 }

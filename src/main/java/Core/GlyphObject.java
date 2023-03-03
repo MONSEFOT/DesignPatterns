@@ -8,9 +8,9 @@ import Widgets.Rectangle;
 import java.util.ArrayList;
 
 public class GlyphObject extends Glyph{
-    private double x, y, width, height;
-    private Glyph parent;
-    private ArrayList<Glyph> children;
+    protected double x, y, width, height;
+    protected Glyph parent;
+    protected ArrayList<Glyph> children;
     
     public GlyphObject() {
         this.children = new ArrayList<Glyph>();

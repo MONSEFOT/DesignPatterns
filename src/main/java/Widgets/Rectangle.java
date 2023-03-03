@@ -11,4 +11,4 @@ import Core.GlyphObject;
  *
  * @author manssif
  */
-public class Rectangle extends GlyphObject {}
+public abstract class Rectangle extends GlyphObject {}

@@ -10,7 +10,7 @@ import Core.GlyphObject;
  *
  * @author manssif
  */
-public class Character extends GlyphObject {
+public abstract class Character extends GlyphObject {
     private char character;
     
     public Character(char character) {
