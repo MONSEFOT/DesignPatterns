@@ -1,0 +1,11 @@
+Core/GlyphObject.class
+Core/Window.class
+Core/Glyph.class
+Enums/GlyphPropeties.class
+Widgets/Character.class
+Core/Point.class
+org/monserfot/Main.class
+Layouts/Row.class
+Core/GlyphObject$1.class
+Layouts/Column.class
+Widgets/Rectangle.class
