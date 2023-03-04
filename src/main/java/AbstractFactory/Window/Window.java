@@ -5,14 +5,18 @@
 package AbstractFactory.Window;
 
 import AbstractFactory.WindowImplementation.WindowImplementation;
+import AbstractFactory.WindowSystemFactory.WindowSystemFactory;
+import AbstractFactory.WindowSystemFactory.WindowsWindowSystemFactory;
 
 public abstract class Window {
     protected WindowImplementation implementation;
+    protected WindowSystemFactory windowSystemFactory;
     protected int height, width;
-    Window(int height, int width, WindowImplementation implementation) {
+    Window(int height, int width, WindowSystemFactory windowSystemFactory) {
+        this.windowSystemFactory = windowSystemFactory;
+        this.implementation = this.windowSystemFactory.createWindowImplementation();
         this.height = height;
         this.width = width;
-        this.implementation = implementation;
     }
 
     protected void Redraw() {}

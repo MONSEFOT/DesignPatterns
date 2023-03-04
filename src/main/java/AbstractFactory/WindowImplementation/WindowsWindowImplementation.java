@@ -1,3 +1,3 @@
 package AbstractFactory.WindowImplementation;
 
-public class WindowsWindowImplementation {}
+public class WindowsWindowImplementation extends WindowImplementation {}
