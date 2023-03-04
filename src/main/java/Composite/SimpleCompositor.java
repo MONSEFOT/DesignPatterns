@@ -1,7 +1,5 @@
 package Composite;
 
-import java.util.ArrayList;
-
 public class SimpleCompositor implements Compositor{
     private Composition composition;
 

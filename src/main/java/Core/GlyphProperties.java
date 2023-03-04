@@ -8,7 +8,7 @@ package Core;
  *
  * @author manssif
  */
-public enum GlyphPropeties {
+public enum GlyphProperties {
     X,
     Y,
     HEIGHT,

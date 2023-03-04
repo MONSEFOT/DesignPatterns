@@ -14,11 +14,11 @@ public class GlyphObject extends Glyph{
     protected ArrayList<Glyph> children;
     
     public GlyphObject() {
-        this.children = new ArrayList<Glyph>();
+        this.children = new ArrayList<>();
     }
 
     @Override
-    public void setProperty(GlyphPropeties property, double value) {
+    public void setProperty(GlyphProperties property, double value) {
         switch (property) {
             case X:
                 this.x = value;
@@ -37,10 +37,10 @@ public class GlyphObject extends Glyph{
     }
 
     @Override
-    public double getProperty(GlyphPropeties property) {
-        if (property == GlyphPropeties.X) return this.x;
-        if(property == GlyphPropeties.Y) return this.y;
-        if(property == GlyphPropeties.WIDTH) return this.width;
+    public double getProperty(GlyphProperties property) {
+        if (property == GlyphProperties.X) return this.x;
+        if(property == GlyphProperties.Y) return this.y;
+        if(property == GlyphProperties.WIDTH) return this.width;
         return this.height;
     }
     

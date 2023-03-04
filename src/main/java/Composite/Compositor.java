@@ -1,8 +1,6 @@
 package Composite;
 
-import java.util.ArrayList;
-
 public interface Compositor {
-    public void setComposition(Composition composition);
-    public void compose();
+    void setComposition(Composition composition);
+    void compose();
 }

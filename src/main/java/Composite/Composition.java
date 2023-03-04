@@ -4,7 +4,7 @@ import Core.Glyph;
 import Core.GlyphObject;
 
 public class Composition extends GlyphObject {
-    private SimpleCompositor compositor;
+    private final SimpleCompositor compositor;
 
     Composition() {
         this.compositor = new SimpleCompositor();

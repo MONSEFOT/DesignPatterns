@@ -6,7 +6,6 @@ package AbstractFactory.Window;
 
 import AbstractFactory.WindowImplementation.WindowImplementation;
 import AbstractFactory.WindowSystemFactory.WindowSystemFactory;
-import AbstractFactory.WindowSystemFactory.WindowsWindowSystemFactory;
 
 public abstract class Window {
     protected WindowImplementation implementation;

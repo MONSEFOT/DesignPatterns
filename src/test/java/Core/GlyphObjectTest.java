@@ -20,10 +20,10 @@ class GlyphObjectTest {
     }
     @Test
     void getProperty() {
-        this.object.setProperty(GlyphPropeties.X, 20);
-        this.object.setProperty(GlyphPropeties.Y, 203);
-        assertEquals(20, this.object.getProperty(GlyphPropeties.X));
-        assertEquals(203, this.object.getProperty(GlyphPropeties.Y));
+        this.object.setProperty(GlyphProperties.X, 20);
+        this.object.setProperty(GlyphProperties.Y, 203);
+        assertEquals(20, this.object.getProperty(GlyphProperties.X));
+        assertEquals(203, this.object.getProperty(GlyphProperties.Y));
     }
 
     @Test

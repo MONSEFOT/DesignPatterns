@@ -7,8 +7,8 @@ package Core;
 import AbstractFactory.Window.Window;
 import Widgets.Rectangle;
 public abstract class Glyph {   
-    abstract protected void setProperty(GlyphPropeties property, double value);
-    abstract protected double getProperty(GlyphPropeties property);
+    abstract protected void setProperty(GlyphProperties property, double value);
+    abstract protected double getProperty(GlyphProperties property);
     abstract protected void insert(Glyph child);
     abstract protected void remove(int index);
     abstract protected void setParent(Glyph parent);
