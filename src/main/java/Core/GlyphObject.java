@@ -4,6 +4,7 @@
  */
 package Core;
 
+import AbstractFactory.Window.Window;
 import Widgets.Rectangle;
 import java.util.ArrayList;
 

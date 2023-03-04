@@ -4,6 +4,7 @@
  */
 package Core;
 
+import AbstractFactory.Window.Window;
 import Widgets.Rectangle;
 public abstract class Glyph {   
     abstract protected void setProperty(GlyphPropeties property, double value);

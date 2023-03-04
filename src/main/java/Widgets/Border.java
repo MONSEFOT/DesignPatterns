@@ -2,7 +2,7 @@ package Widgets;
 
 import Core.Glyph;
 import Core.MonoGlyph;
-import Core.Window;
+import AbstractFactory.Window.Window;
 
 public abstract class Border extends MonoGlyph {
     @Override
